@@ -3,10 +3,290 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Andrejkov web</title>
+  <meta name="description" content="Andrej Ferenc – obklady a dlažby, stavebné práce, priemyselné čistenie a sťahovanie technológií v Považskej Bystrici a podľa dohody aj mimo regiónu.">
+  <meta name="theme-color" content="#0b63ce">
+  <title>Andrej Ferenc | Obklady, dlažby a stavebné práce</title>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>Vitajte na Andrejkovom webe</h1>
-  <p>Web sa práve pripravuje.</p>
+  <a class="skip-link" href="#main">Preskočiť na obsah</a>
+
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="Andrej Ferenc – domov">
+        <span class="brand-mark">AF</span>
+        <span class="brand-text">
+          <strong>Andrej Ferenc</strong>
+          <small>Obklady • Dlažby • Stavebné práce</small>
+        </span>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-label="Otvoriť menu" aria-expanded="false" aria-controls="main-nav">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="main-nav" id="main-nav" aria-label="Hlavná navigácia">
+        <a href="#sluzby">Služby</a>
+        <a href="#o-mne">O mne</a>
+        <a href="#galeria">Fotogaléria</a>
+        <a href="#kontakt">Kontakt</a>
+        <a class="nav-cta" href="tel:+421915530517">Zavolať</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="hero-grid container">
+        <div class="hero-copy">
+          <div class="eyebrow">PRECÍZNA REMESELNÁ PRÁCA</div>
+          <h1>Obklady a dlažby,<br><span>ktoré vydržia.</span></h1>
+          <p class="hero-lead">Realizácia obkladov a dlažieb je hlavnou špecializáciou. K tomu ponúkam vybrané stavebné práce, priemyselné čistenie a pomoc pri sťahovaní a preprave technológií.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="tel:+421915530517">+421 915 530 517</a>
+            <a class="btn btn-secondary" href="#kontakt">Nezáväzný kontakt</a>
+          </div>
+          <div class="hero-points" aria-label="Hlavné výhody">
+            <span>✓ Dôraz na detail</span>
+            <span>✓ Čisté prevedenie</span>
+            <span>✓ Individuálna dohoda</span>
+          </div>
+        </div>
+
+        <div class="hero-media">
+          <div class="hero-image-wrap">
+            <img src="https://images.unsplash.com/photo-1773487521204-236914be03e6?auto=format&fit=crop&w=1200&q=82" alt="Práca s veľkoformátovou dlažbou na stavbe" loading="eager">
+            <div class="hero-badge">
+              <strong>Hlavná činnosť</strong>
+              <span>Obklady & dlažby</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats-strip" aria-label="Prehľad služieb">
+      <div class="container stats-grid">
+        <div><strong>01</strong><span>Obklady a dlažby</span></div>
+        <div><strong>02</strong><span>Stavebné práce</span></div>
+        <div><strong>03</strong><span>Priemyselné čistenie</span></div>
+        <div><strong>04</strong><span>Sťahovanie technológií</span></div>
+      </div>
+    </section>
+
+    <section class="section" id="sluzby">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">SLUŽBY</span>
+            <h2>Poctivá práca od prípravy po detail</h2>
+          </div>
+          <p>Rozsah práce vždy nastavíme podľa konkrétneho priestoru, technického stavu a požadovaného výsledku.</p>
+        </div>
+
+        <div class="services-grid">
+          <article class="service-card service-card-main">
+            <div class="service-number">01</div>
+            <h3>Obklady a dlažby</h3>
+            <p>Realizácia obkladov a dlažieb v kúpeľniach, kuchyniach, chodbách, technických miestnostiach, na podlahách a ďalších plochách.</p>
+            <ul>
+              <li>príprava podkladu a rozmeranie</li>
+              <li>pokládka obkladov a dlažby</li>
+              <li>rezanie, rohy a detailné napojenia</li>
+              <li>škárovanie a dokončovacie práce</li>
+            </ul>
+            <span class="service-tag">Hlavná špecializácia</span>
+          </article>
+
+          <article class="service-card">
+            <div class="service-number">02</div>
+            <h3>Stavebné práce</h3>
+            <p>Pomocné a dokončovacie stavebné práce pri rekonštrukciách a úpravách interiérov či technických priestorov.</p>
+            <ul>
+              <li>prípravné a búracie práce</li>
+              <li>opravy a úpravy povrchov</li>
+              <li>dokončovacie práce</li>
+            </ul>
+          </article>
+
+          <article class="service-card">
+            <div class="service-number">03</div>
+            <h3>Priemyselné čistenie</h3>
+            <p>Čistenie výrobných, skladových a technických priestorov s dôrazom na poriadok, bezpečný postup a dohodnutý rozsah.</p>
+            <ul>
+              <li>priemyselné a technické priestory</li>
+              <li>haly, sklady a zázemie prevádzok</li>
+              <li>čistenie po stavebných zásahoch</li>
+            </ul>
+          </article>
+
+          <article class="service-card">
+            <div class="service-number">04</div>
+            <h3>Sťahovanie a preprava technológií</h3>
+            <p>Pomoc pri presunoch zariadení, vybavenia a technológií v rámci prevádzok alebo pri ich sťahovaní podľa dohodnutého postupu.</p>
+            <ul>
+              <li>manipulácia a presun zariadení</li>
+              <li>príprava na transport</li>
+              <li>koordinácia práce na mieste</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-blue" id="o-mne">
+      <div class="container about-grid">
+        <div class="about-copy">
+          <span class="eyebrow eyebrow-light">O MNE</span>
+          <h2>Andrej Ferenc</h2>
+          <p class="about-lead">Praktický prístup, zodpovedná dohoda a dôraz na výsledok.</p>
+          <p>Pri obkladoch a dlažbách rozhodujú milimetre, rovina, správne napojenia aj čistota detailu. Preto je pre mňa dôležitá dobrá príprava podkladu, premyslené rozloženie a precízne dokončenie.</p>
+          <p>Okrem hlavnej činnosti viem podľa dohody zabezpečiť aj ďalšie stavebné práce, priemyselné čistenie a pomoc pri presune technológií.</p>
+        </div>
+        <div class="process-card">
+          <h3>Ako prebieha spolupráca</h3>
+          <ol>
+            <li><span>1</span><div><strong>Kontakt</strong><small>Telefonicky alebo e-mailom si prejdeme základné zadanie.</small></div></li>
+            <li><span>2</span><div><strong>Dohoda rozsahu</strong><small>Upresníme práce, termín, materiál a podmienky realizácie.</small></div></li>
+            <li><span>3</span><div><strong>Realizácia</strong><small>Práca podľa dohodnutého postupu s dôrazom na detail a poriadok.</small></div></li>
+            <li><span>4</span><div><strong>Odovzdanie</strong><small>Kontrola výsledku a dokončenie detailov.</small></div></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="galeria">
+      <div class="container">
+        <div class="section-heading gallery-heading">
+          <div>
+            <span class="eyebrow">FOTOGALÉRIA</span>
+            <h2>Inšpirácia a typy prác</h2>
+          </div>
+          <p>Fotografie sú zatiaľ ilustračné. Po doplnení vlastných realizácií ich môžeme jednoducho nahradiť skutočnými referenciami.</p>
+        </div>
+
+        <div class="gallery-grid">
+          <button class="gallery-item gallery-item-large" data-title="Obklady a dlažby" data-image="https://images.unsplash.com/photo-1706670351471-14d52ffa2e67?auto=format&fit=crop&w=1800&q=86" aria-label="Otvoriť fotografiu obkladov a dlažby">
+            <img src="https://images.unsplash.com/photo-1706670351471-14d52ffa2e67?auto=format&fit=crop&w=1000&q=82" alt="Kúpeľňa s dlažbou a obkladom" loading="lazy">
+            <span>Obklady a dlažby</span>
+          </button>
+          <button class="gallery-item" data-title="Moderné obklady" data-image="https://images.unsplash.com/photo-1786455588119-5ee708597eb1?auto=format&fit=crop&w=1800&q=86" aria-label="Otvoriť fotografiu moderných obkladov">
+            <img src="https://images.unsplash.com/photo-1786455588119-5ee708597eb1?auto=format&fit=crop&w=900&q=82" alt="Moderná kúpeľňa s obkladom" loading="lazy">
+            <span>Moderné obklady</span>
+          </button>
+          <button class="gallery-item" data-title="Detail dlažby" data-image="https://images.unsplash.com/photo-1782805134528-9b4e58e20069?auto=format&fit=crop&w=1800&q=86" aria-label="Otvoriť fotografiu detailu dlažby">
+            <img src="https://images.unsplash.com/photo-1782805134528-9b4e58e20069?auto=format&fit=crop&w=900&q=82" alt="Moderná kúpeľňa s mramorovou dlažbou" loading="lazy">
+            <span>Detail dlažby</span>
+          </button>
+          <button class="gallery-item" data-title="Stavebné práce" data-image="https://images.unsplash.com/photo-1777919393703-ad0a60555274?auto=format&fit=crop&w=1800&q=86" aria-label="Otvoriť fotografiu stavebných prác">
+            <img src="https://images.unsplash.com/photo-1777919393703-ad0a60555274?auto=format&fit=crop&w=900&q=82" alt="Pracovníci na stavbe" loading="lazy">
+            <span>Stavebné práce</span>
+          </button>
+          <button class="gallery-item" data-title="Priemyselné čistenie" data-image="https://images.unsplash.com/photo-1779517226302-029fb0f68ba1?auto=format&fit=crop&w=1800&q=86" aria-label="Otvoriť fotografiu priemyselného čistenia">
+            <img src="https://images.unsplash.com/photo-1779517226302-029fb0f68ba1?auto=format&fit=crop&w=900&q=82" alt="Priemyselné čistenie tlakovou vodou" loading="lazy">
+            <span>Priemyselné čistenie</span>
+          </button>
+          <button class="gallery-item gallery-item-wide" data-title="Presun a preprava technológií" data-image="https://images.unsplash.com/photo-1776493929304-dfe4d50ae96b?auto=format&fit=crop&w=1800&q=86" aria-label="Otvoriť fotografiu manipulácie s technológiami">
+            <img src="https://images.unsplash.com/photo-1776493929304-dfe4d50ae96b?auto=format&fit=crop&w=1200&q=82" alt="Manipulácia s materiálom a technológiou vo výrobnom areáli" loading="lazy">
+            <span>Presun a preprava technológií</span>
+          </button>
+        </div>
+        <p class="photo-note">Ilustračné fotografie: Unsplash. Galéria nie je prezentovaná ako zoznam hotových realizácií Andreja Ferenca.</p>
+      </div>
+    </section>
+
+    <section class="cta-band">
+      <div class="container cta-band-inner">
+        <div>
+          <span class="eyebrow eyebrow-light">MÁTE PRÁCU NA REALIZÁCIU?</span>
+          <h2>Ozvite sa a prejdeme si zadanie.</h2>
+        </div>
+        <a class="btn btn-white" href="tel:+421915530517">Zavolať Andrejovi</a>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="kontakt">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">KONTAKT</span>
+            <h2>Andrej Ferenc</h2>
+          </div>
+          <p>Pre cenovú ponuku alebo dohodnutie obhliadky stačí zavolať alebo poslať e-mail s krátkym popisom práce.</p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-card">
+            <a class="contact-row" href="tel:+421915530517">
+              <span class="contact-icon">TEL</span>
+              <div><small>Mobil</small><strong>+421 915 530 517</strong></div>
+            </a>
+            <a class="contact-row" href="mailto:ferencandrej97@gmail.com">
+              <span class="contact-icon">MAIL</span>
+              <div><small>E-mail</small><strong>ferencandrej97@gmail.com</strong></div>
+            </a>
+            <a class="contact-row" href="https://www.google.com/maps/search/?api=1&query=Rozkvet+2055%2F115-2%2C+017+01+Pova%C5%BEsk%C3%A1+Bystrica%2C+Slovakia" target="_blank" rel="noopener noreferrer">
+              <span class="contact-icon">MAP</span>
+              <div><small>Adresa</small><strong>Rozkvet 2055/115-2<br>017 01 Považská Bystrica<br>Slovenská republika</strong></div>
+            </a>
+            <div class="contact-actions">
+              <a class="btn btn-primary" href="tel:+421915530517">Zavolať</a>
+              <a class="btn btn-secondary" href="mailto:ferencandrej97@gmail.com">Napísať e-mail</a>
+            </div>
+          </div>
+
+          <form class="contact-form" id="contact-form">
+            <h3>Rýchla správa</h3>
+            <p>Formulár pripraví e-mail vo vašom e-mailovom programe.</p>
+            <label>
+              Meno
+              <input type="text" name="name" autocomplete="name" placeholder="Vaše meno" required>
+            </label>
+            <label>
+              Telefón alebo e-mail
+              <input type="text" name="contact" placeholder="Kontakt na vás" required>
+            </label>
+            <label>
+              O čo máte záujem?
+              <select name="service">
+                <option>Obklady a dlažby</option>
+                <option>Stavebné práce</option>
+                <option>Priemyselné čistenie</option>
+                <option>Sťahovanie a preprava technológií</option>
+                <option>Iné</option>
+              </select>
+            </label>
+            <label>
+              Správa
+              <textarea name="message" rows="5" placeholder="Krátko opíšte rozsah práce, miesto a požadovaný termín."></textarea>
+            </label>
+            <button class="btn btn-primary btn-full" type="submit">Pripraviť e-mail</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="brand brand-footer">
+        <span class="brand-mark">AF</span>
+        <span class="brand-text"><strong>Andrej Ferenc</strong><small>Obklady • Dlažby • Stavebné práce</small></span>
+      </div>
+      <p>© <span id="year"></span> Andrej Ferenc. Všetky práva vyhradené.</p>
+      <a href="#top">Späť hore ↑</a>
+    </div>
+  </footer>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Náhľad fotografie">
+    <button class="lightbox-close" type="button" aria-label="Zavrieť fotogalériu">×</button>
+    <figure>
+      <img src="" alt="">
+      <figcaption></figcaption>
+    </figure>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
