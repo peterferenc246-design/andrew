@@ -37,23 +37,23 @@
   <div class="lightbox" id="lightbox" aria-hidden="true"><button class="close" type="button" aria-label="Zavrieť">×</button><figure><img src="" alt=""><figcaption></figcaption></figure></div>
   <script>
     const photos=[
-      ['Moje foto/andrej-portret.jpg','Andrej','Andrej'],
-      ['Moje foto/spomienka-2021-01.jpg','Spomienka 1','Osobná fotografia'],
-      ['Moje foto/spomienka-2021-02.jpg','Spomienka 2','Osobná fotografia'],
-      ['Moje foto/spomienka-2021-03.jpg','Spomienka 3','Osobná fotografia'],
-      ['Moje foto/spomienka-2021-04.jpg','Spomienka 4','Osobná fotografia'],
-      ['Moje foto/spomienka-2021-05.jpg','Spomienka 5','Osobná fotografia'],
-      ['Moje foto/spomienka-2021-06.jpg','Spomienka 6','Osobná fotografia'],
-      ['Moje foto/andrej-minigolf.jpg','Minigolf','Andrej pri minigolfe'],
-      ['Moje foto/moj-vzor-fitness.jpg','Môj vzor','Fitness fotografia'],
-      ['Moje foto/zaklad-stastia.jpg','Základom šťastia','Motivačný obrázok o základe šťastia'],
-      ['Moje foto/rodina.png','Rodina','Rodinná fotografia']
+      ['Moje%20foto/andrej-portret.jpg','Andrej','Andrej'],
+      ['Moje%20foto/spomienka-2021-01.jpg','Spomienka 1','Osobná fotografia'],
+      ['Moje%20foto/spomienka-2021-02.jpg','Spomienka 2','Osobná fotografia'],
+      ['Moje%20foto/spomienka-2021-03.jpg','Spomienka 3','Osobná fotografia'],
+      ['Moje%20foto/spomienka-2021-04.jpg','Spomienka 4','Osobná fotografia'],
+      ['Moje%20foto/spomienka-2021-05.jpg','Spomienka 5','Osobná fotografia'],
+      ['Moje%20foto/spomienka-2021-06.jpg','Spomienka 6','Osobná fotografia'],
+      ['Moje%20foto/andrej-minigolf.jpg','Minigolf','Andrej pri minigolfe'],
+      ['Moje%20foto/moj-vzor-fitness.jpg','Môj vzor','Fitness fotografia'],
+      ['Moje%20foto/zaklad-stastia.jpg','Základom šťastia','Motivačný obrázok o základe šťastia'],
+      ['Moje%20foto/rodina.png','Rodina','Rodinná fotografia']
     ];
     document.getElementById('year').textContent=new Date().getFullYear();
     const album=document.getElementById('album');
     const lb=document.getElementById('lightbox'),li=lb.querySelector('img'),lc=lb.querySelector('figcaption');
     function closeLb(){lb.classList.remove('open');lb.setAttribute('aria-hidden','true');document.body.style.overflow=''}
-    photos.forEach(([src,title,alt])=>{const b=document.createElement('button');b.className='album-card';b.type='button';b.setAttribute('aria-label','Otvoriť fotografiu: '+title);b.innerHTML='<img loading="lazy" alt=""><span></span>';const img=b.querySelector('img');img.src=src;img.alt=alt;b.querySelector('span').textContent=title;b.addEventListener('click',()=>{li.src=src;li.alt=alt;lc.textContent=title;lb.classList.add('open');lb.setAttribute('aria-hidden','false');document.body.style.overflow='hidden'});album.appendChild(b)});
+    photos.forEach(([src,title,alt])=>{const b=document.createElement('button');b.className='album-card';b.type='button';b.setAttribute('aria-label','Otvoriť fotografiu: '+title);b.innerHTML='<img loading="lazy" alt=""><span></span>';const img=b.querySelector('img');img.src=src;img.alt=alt;img.addEventListener('error',()=>b.remove(),{once:true});b.querySelector('span').textContent=title;b.addEventListener('click',()=>{li.src=src;li.alt=alt;lc.textContent=title;lb.classList.add('open');lb.setAttribute('aria-hidden','false');document.body.style.overflow='hidden'});album.appendChild(b)});
     lb.querySelector('.close').addEventListener('click',closeLb);lb.addEventListener('click',e=>{if(e.target===lb)closeLb()});document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLb()});
   </script>
 </body>
