@@ -120,7 +120,8 @@ function injectPersonalAlbum() {
     ['Moje%20foto/spomienka-2021-05.jpg', 'Spomienka 5'],
     ['Moje%20foto/spomienka-2021-06.jpg', 'Spomienka 6'],
     ['Moje%20foto/andrej-minigolf.jpg', 'Minigolf'],
-    ['Moje%20foto/moj-vzor-fitness.jpg', 'Môj vzor'],
+    ['Moje%20foto/andrej-13-rokov.jpg', 'Andrej 13 rokov'],
+    ['Moje%20foto/moj-vzor.jpg', 'Môj vzor'],
     ['Moje%20foto/zaklad-stastia.jpg', 'Základom šťastia'],
     ['Moje%20foto/rodina.png', 'Rodina']
   ];
