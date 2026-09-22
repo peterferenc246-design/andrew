@@ -121,7 +121,8 @@ function injectPersonalAlbum() {
     ['assets/album/andrej-minigolf.b64', 'Minigolf'],
     ['assets/album/andrej-detstvo.b64', 'Spomienka z detstva'],
     ['assets/album/zaklad-stesti.b64', 'Základom šťastia'],
-    ['assets/album/moj-vzor.b64', 'Môj vzor']
+    ['assets/album/moj-vzor.b64', 'Môj vzor'],
+    ['assets/album/rodina.b64', 'Rodina']
   ];
 
   const grid = section.querySelector('#personal-album-grid');
