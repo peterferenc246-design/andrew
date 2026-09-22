@@ -85,7 +85,6 @@ function injectPersonalAlbum() {
     .personal-album-card::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 52%,rgba(3,25,49,.82))}
     .personal-album-card span{position:absolute;left:18px;right:18px;bottom:16px;z-index:2;color:#fff;font-weight:850;font-size:.98rem}
     .personal-album-card:hover img{transform:scale(1.045);filter:saturate(1.07)}
-    .personal-album-loading{grid-column:1/-1;padding:26px;border:1px solid var(--line);border-radius:18px;background:#fff;color:var(--muted)}
     .personal-album-more{margin-top:22px;display:flex;justify-content:flex-end}
     @media(max-width:960px){.personal-album-heading{display:block}.personal-album-heading p{margin-top:14px}.personal-album-grid{grid-template-columns:repeat(2,1fr)}.personal-album-card:first-child{grid-row:span 1}.personal-album-card:nth-child(4){grid-column:span 1}}
     @media(max-width:680px){.personal-album-grid{grid-template-columns:1fr;grid-auto-rows:300px}.personal-album-more{justify-content:stretch}.personal-album-more .btn{width:100%}}
@@ -104,9 +103,7 @@ function injectPersonalAlbum() {
         </div>
         <p>Fotografie a spomienky z osobného života Andreja.</p>
       </div>
-      <div class="personal-album-grid" id="personal-album-grid">
-        <div class="personal-album-loading">Načítavam fotografie…</div>
-      </div>
+      <div class="personal-album-grid" id="personal-album-grid"></div>
       <div class="personal-album-more">
         <a class="btn btn-secondary" href="osobny-album.html">Otvoriť album na samostatnej stránke</a>
       </div>
@@ -115,43 +112,33 @@ function injectPersonalAlbum() {
   workGallery.insertAdjacentElement('afterend', section);
 
   const photos = [
-    ['assets/album/andrej-pool.b64', 'Pri bazéne'],
-    ['assets/album/motivacia-ver-si.b64', 'Ver si'],
-    ['assets/album/motivacia-nevzdavaj-sa.b64', 'Nevzdávaj sa'],
-    ['assets/album/andrej-minigolf.b64', 'Minigolf'],
-    ['assets/album/andrej-detstvo.b64', 'Spomienka z detstva'],
-    ['assets/album/zaklad-stesti.b64', 'Základom šťastia'],
-    ['assets/album/moj-vzor.b64', 'Môj vzor'],
-    ['assets/album/rodina.b64', 'Rodina']
+    ['Moje foto/andrej-portret.jpg', 'Andrej'],
+    ['Moje foto/spomienka-2021-01.jpg', 'Spomienka 1'],
+    ['Moje foto/spomienka-2021-02.jpg', 'Spomienka 2'],
+    ['Moje foto/spomienka-2021-03.jpg', 'Spomienka 3'],
+    ['Moje foto/spomienka-2021-04.jpg', 'Spomienka 4'],
+    ['Moje foto/spomienka-2021-05.jpg', 'Spomienka 5'],
+    ['Moje foto/spomienka-2021-06.jpg', 'Spomienka 6'],
+    ['Moje foto/andrej-minigolf.jpg', 'Minigolf'],
+    ['Moje foto/moj-vzor-fitness.jpg', 'Môj vzor'],
+    ['Moje foto/zaklad-stastia.jpg', 'Základom šťastia'],
+    ['Moje foto/rodina.png', 'Rodina']
   ];
 
   const grid = section.querySelector('#personal-album-grid');
-  Promise.all(photos.map(async ([url, title]) => {
-    const response = await fetch(url, { cache: 'no-store' });
-    if (!response.ok) throw new Error(`Nepodarilo sa načítať ${url}`);
-    const encoded = (await response.text()).trim();
-    return { title, src: `data:image/jpeg;base64,${encoded}` };
-  }))
-    .then((items) => {
-      grid.innerHTML = '';
-      items.forEach(({ title, src }) => {
-        const button = document.createElement('button');
-        button.className = 'personal-album-card';
-        button.type = 'button';
-        button.setAttribute('aria-label', `Otvoriť fotografiu: ${title}`);
-        button.innerHTML = '<img loading="lazy" alt=""><span></span>';
-        const image = button.querySelector('img');
-        image.src = src;
-        image.alt = title;
-        button.querySelector('span').textContent = title;
-        button.addEventListener('click', () => openLightbox(src, title));
-        grid.appendChild(button);
-      });
-    })
-    .catch((error) => {
-      console.error(error);
-      grid.innerHTML = '<div class="personal-album-loading">Fotografie sa nepodarilo načítať. Skúste stránku obnoviť.</div>';
-    });
+  photos.forEach(([src, title]) => {
+    const button = document.createElement('button');
+    button.className = 'personal-album-card';
+    button.type = 'button';
+    button.setAttribute('aria-label', `Otvoriť fotografiu: ${title}`);
+    button.innerHTML = '<img loading="lazy" alt=""><span></span>';
+    const image = button.querySelector('img');
+    image.src = src;
+    image.alt = title;
+    button.querySelector('span').textContent = title;
+    button.addEventListener('click', () => openLightbox(src, title));
+    grid.appendChild(button);
+  });
 }
 
 injectPersonalAlbum();
