@@ -2,6 +2,14 @@ const menuButton = document.querySelector('.menu-toggle');
 const nav = document.querySelector('.main-nav');
 
 if (menuButton && nav) {
+  const galleryLink = Array.from(nav.querySelectorAll('a')).find((link) => link.getAttribute('href') === '#galeria');
+  if (galleryLink && !nav.querySelector('a[href="osobny-album.html"]')) {
+    const albumLink = document.createElement('a');
+    albumLink.href = 'osobny-album.html';
+    albumLink.textContent = 'Osobný album';
+    galleryLink.insertAdjacentElement('afterend', albumLink);
+  }
+
   menuButton.addEventListener('click', () => {
     const open = nav.classList.toggle('is-open');
     menuButton.setAttribute('aria-expanded', String(open));
