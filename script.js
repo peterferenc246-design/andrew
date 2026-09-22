@@ -119,7 +119,9 @@ function injectPersonalAlbum() {
     ['assets/album/motivacia-ver-si.b64', 'Ver si'],
     ['assets/album/motivacia-nevzdavaj-sa.b64', 'Nevzdávaj sa'],
     ['assets/album/andrej-minigolf.b64', 'Minigolf'],
-    ['assets/album/andrej-detstvo.b64', 'Spomienka z detstva']
+    ['assets/album/andrej-detstvo.b64', 'Spomienka z detstva'],
+    ['assets/album/zaklad-stesti.b64', 'Základom šťastia'],
+    ['assets/album/moj-vzor.b64', 'Môj vzor']
   ];
 
   const grid = section.querySelector('#personal-album-grid');
