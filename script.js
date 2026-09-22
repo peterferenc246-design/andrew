@@ -112,17 +112,17 @@ function injectPersonalAlbum() {
   workGallery.insertAdjacentElement('afterend', section);
 
   const photos = [
-    ['Moje foto/andrej-portret.jpg', 'Andrej'],
-    ['Moje foto/spomienka-2021-01.jpg', 'Spomienka 1'],
-    ['Moje foto/spomienka-2021-02.jpg', 'Spomienka 2'],
-    ['Moje foto/spomienka-2021-03.jpg', 'Spomienka 3'],
-    ['Moje foto/spomienka-2021-04.jpg', 'Spomienka 4'],
-    ['Moje foto/spomienka-2021-05.jpg', 'Spomienka 5'],
-    ['Moje foto/spomienka-2021-06.jpg', 'Spomienka 6'],
-    ['Moje foto/andrej-minigolf.jpg', 'Minigolf'],
-    ['Moje foto/moj-vzor-fitness.jpg', 'Môj vzor'],
-    ['Moje foto/zaklad-stastia.jpg', 'Základom šťastia'],
-    ['Moje foto/rodina.png', 'Rodina']
+    ['Moje%20foto/andrej-portret.jpg', 'Andrej'],
+    ['Moje%20foto/spomienka-2021-01.jpg', 'Spomienka 1'],
+    ['Moje%20foto/spomienka-2021-02.jpg', 'Spomienka 2'],
+    ['Moje%20foto/spomienka-2021-03.jpg', 'Spomienka 3'],
+    ['Moje%20foto/spomienka-2021-04.jpg', 'Spomienka 4'],
+    ['Moje%20foto/spomienka-2021-05.jpg', 'Spomienka 5'],
+    ['Moje%20foto/spomienka-2021-06.jpg', 'Spomienka 6'],
+    ['Moje%20foto/andrej-minigolf.jpg', 'Minigolf'],
+    ['Moje%20foto/moj-vzor-fitness.jpg', 'Môj vzor'],
+    ['Moje%20foto/zaklad-stastia.jpg', 'Základom šťastia'],
+    ['Moje%20foto/rodina.png', 'Rodina']
   ];
 
   const grid = section.querySelector('#personal-album-grid');
@@ -135,6 +135,7 @@ function injectPersonalAlbum() {
     const image = button.querySelector('img');
     image.src = src;
     image.alt = title;
+    image.addEventListener('error', () => button.remove(), { once: true });
     button.querySelector('span').textContent = title;
     button.addEventListener('click', () => openLightbox(src, title));
     grid.appendChild(button);
